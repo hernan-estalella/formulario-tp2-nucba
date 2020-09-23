@@ -11,11 +11,15 @@
     <div class='container'>
         <div class="row h-100">
             <div class="col-3 text-center bg-primary h-100">
-                <form>
+                <form id='movimientos'>
                     <div class="form-group">
                       <label for="monto">Monto</label>
                       <input type="text" class="form-control" id="monto"  placeholder="Ingrese un monto">
                     </div>
+                    <div class="form-group">
+                        <label for="descripcion">Descripcion</label>
+                        <input type="text" class="form-control" id="descripcion"  placeholder="Ingrese una descripcion">
+                      </div>
                     <div class="form-group">
                       <label for="fecha">Fecha</label>
                       <input type="text" class="form-control" id="fecha" placeholder="Ingrese la fecha">
@@ -31,10 +35,22 @@
                   </form>
             </div>
             <div class="col-9 text-center bg-danger h-100">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Monto</th>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Tipo</th>
+                      </tr>
+                    </thead>
+                    <tbody id='tabla-cuerpo'></tbody>
+                    </table>
             </div>
         </div>
     </div>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+<script src="assets/index.js"></script>
 </body>
 </html>
