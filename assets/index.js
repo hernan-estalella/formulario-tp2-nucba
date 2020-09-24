@@ -43,16 +43,19 @@ const render = ()=> {
     })
     return; */
     cuerpoTabla.innerHTML="";
+    let saldo=0;
     movimientos.forEach((movimiento)=>{
         const {monto,fecha,descripcion,tipo} = movimiento;
-
         
+        saldo += parseInt( tipo=='Ingreso' ? monto:-monto);
+
 
         cuerpoTabla.innerHTML += `    <tr ${tipo=='Ingreso'?`class='ingreso'`:`class='egreso'`}>
-        <td>${monto}</td>
-        <td>${descripcion}</td>
         <td>${fecha}</td>
+        <td>${descripcion}</td>
         <td>${tipo}</td>
+        <td>${monto}</td>
+        <td>${saldo}</td>
       </tr>`
 
     })
