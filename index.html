@@ -14,27 +14,28 @@
                 <form id='movimientos'>
                     <div class="form-group">
                       <label for="monto">Monto</label>
-                      <input type="text" class="form-control" id="monto"  placeholder="Ingrese un monto">
+                      <input required type="text" class="form-control" id="monto"  placeholder="Ingrese un monto">
                     </div>
                     <div class="form-group">
                         <label for="descripcion">Descripcion</label>
-                        <input type="text" class="form-control" id="descripcion"  placeholder="Ingrese una descripcion">
+                        <input required type="text" class="form-control" id="descripcion"  placeholder="Ingrese una descripcion">
                       </div>
                     <div class="form-group">
                       <label for="fecha">Fecha</label>
-                      <input type="text" class="form-control" id="fecha" placeholder="Ingrese la fecha">
+                      <input required type="date" class="form-control" id="fecha" placeholder="Ingrese la fecha">
                     </div>
                     <div class="form-group">
                         <label for="tipo">Seleccione ingreso/egreso</label>
                         <select class="form-control" id="tipo">
-                            <option>Ingreso</option>
-                            <option>Egreso</option>
+                            <option value='Ingreso'>Ingreso</option>
+                            <option value='Egreso'>Egreso</option>
                         </select>
                     </div>
                     <button type="submit" class="btn btn-danger">Enviar</button>
+                    <span id="error"></span>
                   </form>
             </div>
-            <div class="col-9 text-center bg-danger h-100">
+            <div class="col-9 text-center bg-info h-100">
                 <table class="table">
                     <thead>
                       <tr>

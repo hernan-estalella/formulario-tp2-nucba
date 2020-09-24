@@ -3,3 +3,11 @@
     width: 100vh;
     height: 50vw;
 }
+
+.ingreso{
+    background-color: green;
+}
+
+.egreso{
+    background-color: red;
+}
